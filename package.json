@@ -12,8 +12,10 @@
     "prebuild": "git submodule foreach git reset --hard && git submodule update --init --recursive && echo export default qrcodegen.QrCode >> ./QR-Code-generator/typescript-javascript/qrcodegen.ts",
     "test": "jest",
     "pretest": "yarn run lint",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "prepublishOnly": "yarn run test && yarn run build"
   },
+  "dependencies": {},
   "peerDependencies": {
     "react": "^18.0.0"
   },
@@ -55,8 +57,5 @@
       "@babel/plugin-transform-typescript"
     ]
   },
-  "types": "dist/index.d.ts",
-  "dependencies": {
-    "@rollup/pluginutils": "^4.2.1"
-  }
+  "types": "lib/index.d.ts"
 }
