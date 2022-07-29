@@ -3,19 +3,19 @@ import babel from '@rollup/plugin-babel'
 import del from 'rollup-plugin-delete'
 import dts from 'rollup-plugin-dts'
 
-const name = 'index'
+const MAIN_FILE = 'index'
 
 export default [
   {
-    input: `src/${name}.tsx`,
+    input: `src/${MAIN_FILE}.ts`,
     output: [
       {
-        file: `lib/${name}.mjs`,
+        file: `lib/${MAIN_FILE}.mjs`,
         format: 'es',
         exports: 'default'
       },
       {
-        file: `lib/${name}.js`,
+        file: `lib/${MAIN_FILE}.js`,
         format: 'cjs',
         exports: 'auto'
       }
@@ -35,15 +35,11 @@ export default [
     ]
   },
   {
-    input: `src/${name}.tsx`,
+    input: `src/${MAIN_FILE}.ts`,
     output: {
-      file: `lib/${name}.d.ts`,
+      file: `lib/${MAIN_FILE}.d.ts`,
       format: 'es'
     },
-    external: [
-      'react',
-      id => /QR-Code-generator/.test(id)
-    ],
     plugins: [
       dts()
     ]
