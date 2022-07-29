@@ -1,3 +1,4 @@
 [submodule "QR-Code-generator"]
 	path = QR-Code-generator
 	url = https://github.com/nayuki/QR-Code-generator
+	ignore = dirty
