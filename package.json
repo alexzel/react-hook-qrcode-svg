@@ -2,8 +2,48 @@
   "name": "react-hook-qrcode",
   "version": "0.0.1",
   "description": "React hook for QR code generator",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.jsm",
   "repository": "https://github.com/alexzel/react-hook-qrcode",
   "author": "Alex Zelensky",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "prebuild": "git submodule foreach git reset --hard && git submodule update --init --recursive && echo export default qrcodegen.QrCode >> ./QR-Code-generator/typescript-javascript/qrcodegen.ts"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.9",
+    "@babel/core": "^7.18.9",
+    "@babel/plugin-transform-typescript": "^7.18.8",
+    "@babel/preset-env": "^7.18.9",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^2.77.2",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "typescript": "^4.7.4"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-typescript",
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-typescript"
+    ]
+  },
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@rollup/pluginutils": "^4.2.1"
+  }
 }
