@@ -1,0 +1,9 @@
+{
+  "name": "react-hook-qrcode",
+  "version": "0.0.1",
+  "description": "React hook for QR code generator",
+  "main": "index.js",
+  "repository": "https://github.com/alexzel/react-hook-qrcode",
+  "author": "Alex Zelensky",
+  "license": "MIT"
+}
