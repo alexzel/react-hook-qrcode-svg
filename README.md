@@ -2,7 +2,7 @@
 
 React hook that generates QR code as SVG path.
 
-You can use SVG path for SVG element rendering or building a data URL (could be useful when it comes to downloading or printing).
+You can use SVG path for `<svg>` element rendering or building a data URL (could be useful when it comes to downloading or printing).
 
 See QR code generator: [QR-Code-generator](https://github.com/nayuki/QR-Code-generator/tree/master/typescript-javascript).
 
