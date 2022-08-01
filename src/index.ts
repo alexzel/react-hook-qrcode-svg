@@ -1,5 +1,5 @@
 /**
- * @license react-hook-qrcode
+ * @license react-hook-qrcode-svg
  * Copyright (c) 2022, Alex Zelensky. (MIT License)
  * https://github.com/alexzel/react-hook-qrcode
  */

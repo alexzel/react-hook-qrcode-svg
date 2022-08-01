@@ -1,4 +1,4 @@
-# react-hook-qrcode
+# react-hook-qrcode-svg
 
 React hook that generates QR code as SVG path.
 
@@ -9,12 +9,12 @@ See QR code generator: [QR-Code-generator](https://github.com/nayuki/QR-Code-gen
 ## Installation
 
 ```sh
-yarn add react-hook-qrcode
+yarn add react-hook-qrcode-svg
 ```
 or
 
 ```sh
-npm install react-hook-qrcode
+npm install react-hook-qrcode-svg
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ npm install react-hook-qrcode
 
 ```jsx
 import React from 'react'
-import useQRCodeGenerator from 'react-hook-qrcode'
+import useQRCodeGenerator from 'react-hook-qrcode-svg'
 
 const QRCODE_SIZE = 256
 const QRCODE_LEVEL = 'Q'
@@ -45,7 +45,7 @@ const QRCodeComponent = ({ value }) => {
 
 ```jsx
 import React, { useMemo } from 'react'
-import useQRCodeGenerator from 'react-hook-qrcode'
+import useQRCodeGenerator from 'react-hook-qrcode-svg'
 
 const LOGO_PATH = `M 53.00,0.44
  C 74.13,-2.27 95.87,3.14 110.83,19.04
