@@ -11,11 +11,11 @@ const Component = (
   }
 ): ReactElement => {
   const { value, level, border } = props
-  const { parts, size } = useQRCodeGenerator(value, level)
+  const { path, viewBox } = useQRCodeGenerator(value, level, border)
   return (
-    <svg viewBox={`0 0 ${size + border * 2} ${size + border * 2}`} stroke='none'>
+    <svg viewBox={viewBox} stroke='none'>
       <rect width='100%' height='100%' fill='#ffffff' />
-      <path d={parts.join(' ')} fill='#000000' />
+      <path d={path} fill='#000000' />
     </svg>
   )
 }

@@ -2,8 +2,12 @@
   "name": "react-hook-qrcode",
   "version": "0.0.1",
   "description": "React hook for QR code generator",
-  "main": "lib/index.js",
-  "module": "lib/index.jsm",
+  "keywords": [
+    "react",
+    "hook",
+    "qrcode",
+    "svg"
+  ],
   "repository": "https://github.com/alexzel/react-hook-qrcode",
   "author": "Alex Zelensky",
   "license": "MIT",
@@ -15,6 +19,9 @@
     "lint": "eslint ./src",
     "prepublishOnly": "yarn run test && yarn run build"
   },
+  "main": "lib/index.js",
+  "module": "lib/index.jsm",
+  "types": "lib/index.d.ts",
   "dependencies": {},
   "peerDependencies": {
     "react": "^18.0.0"
@@ -56,6 +63,5 @@
     "plugins": [
       "@babel/plugin-transform-typescript"
     ]
-  },
-  "types": "lib/index.d.ts"
+  }
 }
