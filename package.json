@@ -1,6 +1,6 @@
 {
   "name": "react-hook-qrcode-svg",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "React hook for QR code generation as SVG path",
   "keywords": [
     "react",
