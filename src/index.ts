@@ -47,7 +47,7 @@ export default (
   level: ErrorLevel = 'L',
   border: number = 0,
   exclude: ExcludeArea | null = null
-): QrCode | null =>
+): QrCode =>
   useMemo(() => {
     if (text === '') {
       return {
