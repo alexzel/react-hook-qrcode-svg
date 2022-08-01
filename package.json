@@ -1,6 +1,6 @@
 {
   "name": "react-hook-qrcode",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "React hook for QR code generator",
   "keywords": [
     "react",
@@ -19,7 +19,7 @@
     "lint": "eslint ./src",
     "release": "yarn version",
     "preversion": "yarn build && yarn test",
-    "postversion": "git push --tags && yarn publish . --new-version $npm_package_version && git push && echo Successfully pushed new release $npm_package_version!",
+    "postversion": "git push --tags && yarn publish . --new-version $npm_package_version && git push && echo Successfully published new release $npm_package_version!",
     "cleanup": "git tag -d $(git tag) && git fetch --all --tags && git clean --force -d -x && git reset --hard origin/main && git checkout main"
   },
   "main": "lib/index.js",
