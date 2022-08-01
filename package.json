@@ -15,7 +15,7 @@
     "build": "rollup -c",
     "prebuild": "git submodule foreach git reset --hard && git submodule update --init --recursive && echo export default qrcodegen.QrCode >> ./QR-Code-generator/typescript-javascript/qrcodegen.ts",
     "test": "jest",
-    "pretest": "yarn lint",
+    "pretest": "yarn lint && tsc --noEmit",
     "lint": "eslint ./src",
     "release": "yarn version",
     "preversion": "yarn install && yarn build && yarn test",

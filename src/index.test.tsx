@@ -6,7 +6,7 @@ import useQRCodeGenerator from './'
 const Component = (
   props: {
     value: string
-    level: string
+    level: 'L' | 'M' | 'Q' | 'H'
     border: number
   }
 ): ReactElement => {
