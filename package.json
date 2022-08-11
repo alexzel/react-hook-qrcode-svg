@@ -5,8 +5,13 @@
   "keywords": [
     "react",
     "hook",
+    "hooks",
     "qrcode",
-    "svg"
+    "qr",
+    "svg",
+    "generator",
+    "responsive",
+    "image"
   ],
   "repository": "https://github.com/alexzel/react-hook-qrcode-svg",
   "author": "Alex Zelensky",
