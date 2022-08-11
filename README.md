@@ -2,7 +2,7 @@
 
 React hook that generates QR code and returns SVG path.
 
-You can use SVG path for `<svg>` element rendering or building a data URL (useful when it comes to downloading or printing).
+You can use SVG path for `<svg>` element rendering or building SVG data URL (useful when it comes to downloading or printing).
 
 See QR code generator: [QR-Code-generator](https://github.com/nayuki/QR-Code-generator/tree/master/typescript-javascript).
 
@@ -41,7 +41,7 @@ const QRCodeComponent = ({ value }) => {
 }
 ```
 
-### Exclude rectangular area and draw logo
+### Logo path
 
 ```jsx
 import React, { useMemo } from 'react'
@@ -62,12 +62,20 @@ const QRCODE_LEVEL = 'Q'
 const QRCODE_BORDER = 4
 
 const QRCodeComponent = ({ value }) => {
-  const { path, viewBox, excludePoints } = useQRCodeGenerator(value, QRCODE_LEVEL, QRCODE_BORDER, {
-    width: 42,
-    height: 42,
-    baseSize: QRCODE_SIZE
-  })
+  // Generate SVG path
+  const { path, viewBox, excludePoints } = useQRCodeGenerator(
+    value,
+    QRCODE_LEVEL,
+    QRCODE_BORDER,
+    // Exclude rectangular area from QR Code
+    {
+      width: 42,
+      height: 42,
+      baseSize: QRCODE_SIZE
+    }
+  )
 
+  // Calculate logo path transformations
   const [scaleX, scaleY, translateX, translateY] = useMemo(() => {
     const scaleX = (excludePoints.x2 - excludePoints.x1) / LOGO_SIZE
     const scaleY = (excludePoints.y2 - excludePoints.y1) / LOGO_SIZE
@@ -78,6 +86,7 @@ const QRCodeComponent = ({ value }) => {
     return [scaleX, scaleY, translateX, translateY]
   }, [value])
 
+  // Render SVG element
   return (
     <svg width={QRCODE_SIZE} height={QRCODE_SIZE} viewBox={viewBox} stroke='none'>
       <rect width='100%' height='100%' fill='#ffffff' />
