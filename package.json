@@ -18,7 +18,10 @@
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
-    "prebuild": "git submodule foreach git reset --hard && git submodule update --init --recursive && echo export default qrcodegen.QrCode >> ./QR-Code-generator/typescript-javascript/qrcodegen.ts",
+    "prebuild": "yarn submodule-init && yarn submodule-fix",
+    "submodule-fix": "echo export default qrcodegen.QrCode >> ./QR-Code-generator/typescript-javascript/qrcodegen.ts",
+    "submodule-init": "git submodule foreach git reset --hard && git submodule update --init --recursive",
+    "submodule-update": "git submodule foreach git reset --hard && git submodule update --remote --merge",
     "test": "jest",
     "pretest": "yarn lint && tsc --noEmit",
     "lint": "eslint ./src",
