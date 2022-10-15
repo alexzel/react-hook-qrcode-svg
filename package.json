@@ -19,7 +19,7 @@
   "scripts": {
     "build": "rollup -c",
     "prebuild": "yarn submodule-init && yarn submodule-fix",
-    "submodule-fix": "echo export default qrcodegen.QrCode >> ./QR-Code-generator/typescript-javascript/qrcodegen.ts",
+    "submodule-fix": "echo export default qrcodegen.QrCode >> ./QR-Code-generator/typescript-javascript/qrcodegen.ts && sed -i '' -r '1 s/^\\/\\*[[:space:]]*$/\\/\\*!/' ./QR-Code-generator/typescript-javascript/qrcodegen.ts",
     "submodule-init": "git submodule foreach git reset --hard && git submodule update --init --recursive",
     "submodule-update": "git submodule foreach git reset --hard && git submodule update --remote --merge",
     "test": "jest",
