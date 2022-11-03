@@ -1,7 +1,7 @@
 /**
  * @license react-hook-qrcode-svg
  * Copyright (c) 2022, Alex Zelensky. (MIT License)
- * https://github.com/alexzel/react-hook-qrcode
+ * https://github.com/alexzel/react-hook-qrcode-svg
  */
 
 import { useMemo } from 'react'
