@@ -105,4 +105,4 @@ export default (
       viewBox,
       excludePoints: e
     }
-  }, [text, border, level, exclude])
+  }, [text, border, level, exclude?.x, exclude?.y, exclude?.width, exclude?.height, exclude?.baseSize])
