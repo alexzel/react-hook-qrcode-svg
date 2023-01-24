@@ -21,7 +21,7 @@
   "scripts": {
     "build": "rollup -c",
     "prebuild": "yarn submodule-init && yarn submodule-fix",
-    "submodule-fix": "echo export default qrcodegen.QrCode >> ./QR-Code-generator/typescript-javascript/qrcodegen.ts && sed -i.old -r '1 s/^\\/\\*[[:space:]]*$/\\/\\*!/' ./QR-Code-generator/typescript-javascript/qrcodegen.ts",
+    "submodule-fix": "echo export default qrcodegen.QrCode >> ./QR-Code-generator/typescript-javascript/qrcodegen.ts && sed -i.old -r '1 s/^\\/\\*[[:space:]]*$/\\/\\**\\n * @license/' ./QR-Code-generator/typescript-javascript/qrcodegen.ts",
     "submodule-init": "git submodule foreach git reset --hard && git submodule update --init --recursive",
     "submodule-update": "git submodule foreach git reset --hard && git submodule update --remote --merge",
     "test": "jest",
@@ -76,6 +76,7 @@
     "typescript": "^4.9.4"
   },
   "babel": {
+    "comments": false,
     "presets": [
       "@babel/preset-react",
       "@babel/preset-typescript",
