@@ -13,6 +13,8 @@
     "responsive",
     "image"
   ],
+  "homepage": "https://github.com/alexzel/react-hook-qrcode-svg#readme",
+  "bugs": "https://github.com/alexzel/react-hook-qrcode-svg/issues",
   "repository": "https://github.com/alexzel/react-hook-qrcode-svg",
   "author": "Alex Zelensky",
   "license": "MIT",
