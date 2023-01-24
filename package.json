@@ -4,14 +4,14 @@
   "description": "React hook for QR code generation as SVG path",
   "keywords": [
     "react",
-    "hook",
-    "hooks",
-    "qrcode",
+    "react-hook",
     "qr",
+    "qrcode",
     "svg",
-    "generator",
+    "hook",
+    "svg-path",
     "responsive",
-    "image"
+    "qrcode-generator"
   ],
   "homepage": "https://github.com/alexzel/react-hook-qrcode-svg#readme",
   "bugs": "https://github.com/alexzel/react-hook-qrcode-svg/issues",
