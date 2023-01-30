@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
 import renderer from 'react-test-renderer'
 
-import useQRCodeGenerator from './'
+import useQRCodeGenerator from '../src'
 
 const Component = (
   props: {
