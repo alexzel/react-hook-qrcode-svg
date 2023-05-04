@@ -33,7 +33,12 @@ const QRCodeComponent = ({ value }) => {
   const { path, viewBox } = useQRCodeGenerator(value, QRCODE_LEVEL, QRCODE_BORDER)
 
   return (
-    <svg width={QRCODE_SIZE} height={QRCODE_SIZE} viewBox={viewBox} stroke='none'>
+    <svg
+      width={QRCODE_SIZE}
+      height={QRCODE_SIZE}
+      viewBox={viewBox}
+      stroke='none'
+    >
       <rect width='100%' height='100%' fill='#ffffff' />
       <path d={path} fill='#000000' />
     </svg>
@@ -84,11 +89,16 @@ const QRCodeComponent = ({ value }) => {
     const translateY = excludePoints.y1 + QRCODE_BORDER
 
     return [scaleX, scaleY, translateX, translateY]
-  }, [value])
+  }, [excludePoints])
 
   // Render SVG element
   return (
-    <svg width={QRCODE_SIZE} height={QRCODE_SIZE} viewBox={viewBox} stroke='none'>
+    <svg
+      width={QRCODE_SIZE}
+      height={QRCODE_SIZE}
+      viewBox={viewBox}
+      stroke='none'
+    >
       <rect width='100%' height='100%' fill='#ffffff' />
       <path d={path} fill='#000000' />
       <g transform={`translate(${translateX}, ${translateY})`}>
@@ -118,7 +128,7 @@ exclude: {
   x?: number
   y?: number
   width: number
-  height: number,
+  height: number
   baseSize: number
 } | null = null
 ```
