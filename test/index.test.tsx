@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { type ReactElement } from 'react'
 import renderer from 'react-test-renderer'
 
 import useQRCodeGenerator from '../src'
