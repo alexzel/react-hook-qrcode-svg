@@ -7,27 +7,27 @@
 import { useMemo } from 'react'
 import QRC from '../QR-Code-generator/typescript-javascript/qrcodegen'
 
-type ErrorLevel = 'L' | 'M' | 'Q' | 'H'
+export type ErrorLevel = 'L' | 'M' | 'Q' | 'H'
 
-interface Rectangle {
+export interface Rectangle {
   x?: number
   y?: number
   width: number
   height: number
 }
 
-type ExcludeArea = Rectangle & {
+export type ExcludeArea = Rectangle & {
   baseSize: number
 }
 
-interface ExcludePoints {
+export interface ExcludePoints {
   x1: number
   y1: number
   x2: number
   y2: number
 }
 
-interface QrCode {
+export interface QrCode {
   path: string
   viewBox: string
   excludePoints?: ExcludePoints
